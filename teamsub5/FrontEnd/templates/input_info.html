@@ -2,23 +2,83 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Student Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Team00: TeamName</title>
   </head>
   <body>
-    <form action="{{ url_for('submit') }}" method="post">
-      <label>Name <input type="text" name="name" /></label><br /><br />
-      <label>Student Number: <input type="text" name="student_number" /></label
+    <h1>Team00: TeamName</h1>
+    <form action="/submit" method="post">
+      <label for="name">* Name:</label>
+      <input type="text" id="name" name="name" required /><br /><br />
+
+      <label for="student_number">* Student Number:</label>
+      <input
+        type="text"
+        id="student_number"
+        name="student_number"
+        required
+      /><br /><br />
+
+      <label for="university">* University:</label>
+      <input
+        type="text"
+        id="university"
+        name="university"
+        required
+      /><br /><br />
+
+      <label for="major">* Major:</label>
+      <input type="text" id="major" name="major" required /><br /><br />
+
+      <label for="gender">* Gender:</label>
+      <input type="radio" id="male" name="gender" value="male" required />
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="female" required />
+      <label for="female">Female</label><br /><br />
+
+      <label for="email">* Email:</label>
+      <input type="text" id="email" name="email" required />
+      @
+      <select name="email_domain" id="email_domain" required>
+        <option value="gmail.com">gmail.com</option>
+        <option value="naver.com">naver.com</option>
+        <option value="daum.net">daum.net</option>
+        <option value="dgu.ac.kr">dgu.ac.kr</option>
+        <option value="outlook.com">outlook.com</option>
+        <option value="yahoo.com">yahoo.com</option></select
       ><br /><br />
-      <label>Gender</label><br />
-      <input type="radio" name="gender" value="Male" /> Male
-      <input type="radio" name="gender" value="Female" /> Female<br /><br />
-      <label>Major <input type="text" name="major" /></label><br /><br />
-      <label>Programming Languages</label><br /><br />
-      <input type="checkbox" name="languages" value="Python" /> Python
-      <input type="checkbox" name="languages" value="Java" /> Java
-      <input type="checkbox" name="languages" value="HTML" /> HTML
-      <input type="checkbox" name="languages" value="C++" /> C++<br /><br />
-      <button type="submit">Submit</button>
+
+      <label for="programming_languages">* Programming Languages:</label><br />
+      <input
+        type="checkbox"
+        id="python"
+        name="programming_languages"
+        value="Python"
+      />
+      <label for="python">Python</label>
+      <input
+        type="checkbox"
+        id="java"
+        name="programming_languages"
+        value="Java"
+      />
+      <label for="java">Java</label>
+      <input
+        type="checkbox"
+        id="html"
+        name="programming_languages"
+        value="HTML"
+      />
+      <label for="html">HTML</label>
+      <input
+        type="checkbox"
+        id="cpp"
+        name="programming_languages"
+        value="C++"
+      />
+      <label for="cpp">C++</label><br /><br />
+
+      <input type="submit" value="Submit" />
     </form>
   </body>
 </html>
